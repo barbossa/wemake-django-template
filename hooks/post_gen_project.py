@@ -16,7 +16,7 @@ And from pydanny's cookiecutter-django:
 """
 
 import os
-import secrets
+# import secrets
 import shutil
 import string
 
@@ -46,7 +46,7 @@ def _get_random_string(length=50):
     )
 
     chars = string.digits + string.ascii_letters + punctuation
-    return ''.join(secrets.choice(chars) for _ in range(length))
+    return ''.join(chars for _ in range(length))
 
 
 def _create_secret_key(config_path):
